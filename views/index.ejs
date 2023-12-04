@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <link rel="stylesheet" href="/stylesheets/hf.css" />
+    <title>home</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="brand">
+                <h1>Caffelato</h1>
+            </div>
+
+            <div class="link-container">
+                <ul>
+                    <li class="active">
+                        <a href="/">Home</a>
+                    </li>
+                    <li>
+                        <a href="gallery">Gallery</a>
+                    </li>
+                    <li>
+                        <a href="menu">Menu</a>
+                    </li>
+                    <li>
+                        <a href="about">About</a>
+                    </li>
+                    <li>
+                        <button>Contact</button>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="bars">
+                <button class="bars"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page">
+            <div class="img-container"></div>
+
+            <div class="text">
+                <h1>Enjoy <span>Your Time...</span></h1>
+            </div>
+
+            <div class="desc">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta reiciendis dolorum fuga vitae alias maxime hic obcaecati</p>
+            </div>
+        </div>
+        
+        <div class="page">
+            <div class="gal-page ps">
+                <div>
+                    <div class="gal-text ps-text">
+                        <h1>Lorem ipsum</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis autem blanditiis accusamus doloribus fugit modi itaque aperiam deleniti. Pariatur provident reprehenderit vero placeat facere fuga labore enim perspiciatis tempore adipisci distinctio minus reiciendis minima temporibus perferendis sequi, autem voluptates alias.
+                        </p>
+                        <a href="#">Get more info!</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="img-gal ps-img">
+                        <img src="/imgs/benjamin-rascoe-A_goklA1mH0-unsplash.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="menu-page ps">
+                <div>
+                    <div class="img-menu ps-img">
+                        <img src="/imgs/toa-heftiba-4wkKoreQbF8-unsplash.jpg" alt="">
+                    </div>
+                </div>
+                <div>
+                    <div class="menu-text ps-text">
+                        <h1>Lorem ipsum</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis autem blanditiis accusamus doloribus fugit modi itaque aperiam deleniti. Pariatur provident reprehenderit vero placeat facere fuga labore enim perspiciatis tempore adipisci distinctio minus reiciendis minima temporibus perferendis sequi, autem voluptates alias.
+                        </p>
+                        <a href="#">Get more info!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="page">
+            <div class="about-page ps">
+                <div>
+                    <div class="about-text ps-text">
+                        <h1>Lorem ipsum</h1>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis autem blanditiis accusamus doloribus fugit modi itaque aperiam deleniti. Pariatur provident reprehenderit vero placeat facere fuga labore enim perspiciatis tempore adipisci distinctio minus reiciendis minima temporibus perferendis sequi, autem voluptates alias.
+                        </p>
+                        <a href="#">Get more info!</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="img-about ps-img">
+                        <img src="/imgs/volkan-vardar-tsJ5qcNQqdE-unsplash.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <div class="bars-menu">
+        <ul>
+            <li class="active">
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="gallery">Gallery</a>
+            </li>
+            <li>
+                <a href="menu">Menu</a>
+            </li>
+            <li>
+                <a href="about">About</a>
+            </li>
+            <li>
+                <button>Contact Us</button>
+            </li>
+        </ul>
+    </div>
+
+    <%- include('./partials/footer') -%>
+
+    <script src="/scripts/nav.js"></script>
+</body>
+</html>

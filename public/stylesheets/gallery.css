@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@200;400;700&display=swap');
+
+:root {
+    --f1-family: 'Playfair Display', serif;
+    --f2-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-family: var(--f2-family);
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+main {
+    margin: 10% 3% 5%;
+    width: auto;
+    height: auto;
+}
+
+main .pr {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    margin: 1rem 0;
+    /* background-color: blue; */
+}
+
+.pr .sd {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pr .text {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.pr .text.end {
+    padding-left: 30px;
+    width: 70%;
+}
+
+.pr .text.end h1 {
+    font-size: 3.8rem;
+}
+
+.pr h1 {
+    font-size: 4rem;
+    width: 80%;
+    line-height: 4.5rem;
+}
+
+.pr p {
+    font-size: 0.9rem;
+    margin: 0.5rem;
+    width: 90%;
+}
+
+.pr img {
+    width: 90%;
+    height: 90%;
+    max-width: 900px;
+    border-radius: 5px;
+}
+
+.ps {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+}
+
+.ps div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 565px) {
+    main {
+        margin: 17% 3% 5%;
+    }
+
+    main .pr {
+        height: max-content;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .pr .sd {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .pr h1 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+        width: 100%;
+        margin-bottom: 0.3rem;
+    }
+
+    .pr .text.end h1 {
+        font-size: 2rem;
+    } 
+}

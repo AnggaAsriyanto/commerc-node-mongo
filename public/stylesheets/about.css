@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@200;400;700&display=swap');
+
+:root {
+    --f1-family: 'Playfair Display', serif;
+    --f2-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-family: var(--f2-family);
+    background-color: #fff;
+    overflow-x: hidden;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    margin: 10% 0;
+}
+
+.ps {
+    padding: 0 5%;
+}
+
+.ps div {
+    align-items: center;
+}
+
+.ps .about-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.ps .about-text h1 {
+    font-size: 4rem;
+}
+
+.ps .about-text p {
+    font-size: 0.85rem;
+    color: rgba(0, 0, 0, 0.7);
+    width: 80%;
+    line-height: 1.49rem;
+}
+.ps .img-container {
+    width: 100%;
+    height: 90%;
+}
+
+.ps img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+@media(max-width: 565px) {
+    main {
+        margin: 17% 0;
+    }
+
+    main .ps {
+        flex-direction: column-reverse;
+    }
+
+    .ps .about-text h1 {
+        font-size: 3rem;
+    }
+
+    .ps .about-text p {
+        width: 100%;
+    }
+}

@@ -1,0 +1,260 @@
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    padding: 0 6%;
+    background-color: rgb(255, 231, 190);
+    transition: transform 1s ease;
+    z-index: 1000;
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1 {
+    font-size: 2rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav .active {
+    border-bottom: 3px solid orange;
+    color: orange;
+}
+
+nav li {
+    margin-left: 1.2rem;
+}
+
+nav a, nav button {
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: unset;
+}
+
+nav button:active {
+    opacity: 0;
+}
+
+nav button {
+    font-family: inherit;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+nav .bars {
+    display: none;
+}
+
+.ps {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+}
+
+.ps div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    width: 100%;
+    height: 30%;
+}
+
+footer .ps-footer {
+    background-color: rgb(29, 19, 37);
+}
+
+footer .contact-link {
+    padding: 0 4rem;
+    justify-content: left;
+}
+
+footer h1 {
+    margin: auto 0;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 5.5rem;
+    white-space: nowrap;
+}
+
+footer hr {
+    width: 4px;
+    height: 70%;
+    margin: auto 0;
+    border: none;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+footer ul {
+    list-style: none;
+    margin: auto 0;
+}
+
+footer li {
+    line-height: 35px;
+}
+
+footer li a {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.95);
+    text-decoration: none;
+}
+
+footer li span {
+    margin: 0 0.5rem;
+}
+
+footer li a:hover {
+    text-decoration: underline;
+}
+
+.bars-menu {
+    display: none;
+}
+
+@media(max-width: 1024px) {
+    footer h1 {
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 565px) {
+    header {
+        height: 7%;
+    }
+
+    nav h1 {
+        font-size: 1.5rem;
+    }
+
+    nav .link-container {
+        display: none;
+    }
+
+    nav .bars {
+        display: block;
+    }
+
+    .ps {
+        flex-direction: column;
+    }
+
+    .ps div {
+        width: 100%;
+    }
+
+    footer {
+        height: 40%;
+    }
+
+    footer h1 {
+        font-size: 2.5rem;
+    }
+
+    footer hr {
+        display: none;
+    }
+
+    footer .contact-link {
+        padding: 0 2rem;
+    }
+
+    footer ul {
+        padding-bottom: 2rem;
+    }
+
+    footer li {
+        line-height: 32px;
+    }
+
+    footer li a {
+        font-size: 0.85rem;
+    }
+
+    .bars-menu {
+        display: block;
+        height: 100%;
+        width: 70%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #fff;
+        transform: translateX(-105%);
+        transition: transform 1s ease;
+        box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .bars-menu ul {
+        margin-top: 10%;
+        position: relative;
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+        padding: 0 2rem;
+    }
+
+    .bars-menu li {
+        list-style: none;
+        margin-top: 20%;
+        border-bottom: 1px solid #000;
+    }
+
+    .bars-menu li.active a{
+        color: rgb(241, 216, 172);
+    }
+
+    .bars-menu li a, .bars-menu button {
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-decoration: none;
+        color: #000;
+    }
+
+    .bars-menu li:last-of-type {
+        border-bottom: none;
+    }
+
+    .bars-menu button {
+        border: none;
+        font-family: inherit;
+        padding: 3px 8px;
+        border-radius: 5px;
+        color: #fff;
+        background-color: rgb(99, 241, 99);  
+    }
+
+    .bars-menu button:active, .bars-menu a:active {
+        opacity: 0;
+    }
+
+    .bars-menu span {
+        margin-left: 0.5rem;
+    }
+
+}

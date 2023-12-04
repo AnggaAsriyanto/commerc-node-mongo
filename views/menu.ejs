@@ -1,0 +1,229 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/stylesheets/menu.css" />
+    <link rel="stylesheet" href="/stylesheets/hf.css" />
+    <title>Foods & Drinks</title>
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="brand">
+            <h1>Caffelato</h1>
+          </div>
+  
+          <div class="link-container">
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="gallery">Gallery</a>
+              </li>
+              <li class="active">
+                <a href="menu">Menu</a>
+              </li>
+              <li>
+                <a href="about">About</a>
+              </li>
+              <li>
+                <button>Contact</button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bars">
+            <button class="bars"><span><i class="fas fa-bars"></i></span></button>
+          </div>
+        </nav>
+      </header>
+
+      <main>
+          <div class="menu-fav page">
+            <div class="title-page">
+                <h1>Menu Favorite <span><i class="fas fa-star"></i></span></h1>
+            </div>
+            <div class="scroll-menu">
+                <div class="menu-container">
+                    <% favorite.forEach(fav => { %>
+                        <a href="/menu/favorite/<%=fav.id%>">
+                            <div class="menu">
+                                <div class="img-container">
+                                    <img src="<%= fav.image %>"" alt="">
+                                </div>
+                                <div class="menu-info">
+                                    <div class="title-menu">
+                                        <h1><%= fav.title %></h1>
+                                        <p><%= fav.desc %></p>
+                                    </div>
+                                    <div class="price-menu">
+                                        <h2>Rp <%= fav.price %></h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    <% }) %>
+                    
+                    <!-- <div class="menu">
+                        <div class="img-container">
+                            <img src="/imgs/najla-cam-f5WcXes7b_0-unsplash.jpg" alt="">
+                        </div>
+                        <div class="menu-info">
+                            <div class="title-menu">
+                                <h1>Ice Cream</h1>
+                                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, id!</p>
+                            </div>
+                            <div class="price-menu">
+                                <h2>Rp 15.000</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu"></div>
+                    <div class="menu"></div>
+                    <div class="menu"></div>
+                    <div class="menu"></div>
+                    <div class="menu"></div> -->
+                </div>
+            </div>
+            
+            <button id="left" class="btn btn-left mf-btn"><i class="fas fa-chevron-left"></i></button>
+            <button id="right" class="btn btn-right mf-btn"><i class="fas fa-chevron-right"></i></button>
+          </div>
+
+          <div class="drinks page">
+            <div class="title-page">
+                <h1>Drinks <span><i class="fas fa-coffee"></i></span></h1>
+            </div>
+            <div class="menu-container">
+                <% drink.forEach(drk => { %>
+                        <div class="menu">
+                            <div class="img-container">
+                                <img src="<%= drk.image %>"" alt="">
+                            </div>
+                            <a href="/menu/drink/<%=drk.id%>">
+                                <div class="menu-info">
+                                    <div class="title-menu">
+                                        <h1><%= drk.title %></h1>
+                                        <p><%= drk.desc %></p>
+                                    </div>
+                                    <div class="price-menu">
+                                        <h2>Rp <%= drk.price %></h2>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                <% }) %>
+                <!-- <div class="menu"></div>
+                <div class="menu"></div>
+                <div class="menu">
+                    <div class="img-container">
+                        <img src="/imgs/taisiia-shestopal-7Nt2BeSIIzo-unsplash.jpg" alt="">
+                    </div>
+                    <div class="menu-info">
+                        <div class="title-menu">
+                            <h1>Coffe Mocha</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, id!</p>
+                        </div>
+                        <div class="price-menu">
+                            <h2>Rp 15.000</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu">
+                    <div class="img-container">
+                        <img src="/imgs/taisiia-shestopal-7Nt2BeSIIzo-unsplash.jpg" alt="">
+                    </div>
+                    <div class="menu-info">
+                        <div class="title-menu">
+                            <h1>Coffe Mocha</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, id!</p>
+                        </div>
+                        <div class="price-menu">
+                            <h2>Rp 15.000</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu"></div> -->
+            </div>
+          </div>
+
+          <div class="foods page">
+            <div class="title-page">
+                <h1>Foods <span><i class="fas fa-utensils"></i></span></h1>
+            </div>
+            <div class="menu-container">
+                <% food.forEach(fd => { %>
+                    <div class="menu">
+                        <div class="img-container">
+                            <img src="<%= fd.image %>"" alt="">
+                        </div>
+                        <div class="menu-info">
+                            <div class="title-menu">
+                                <a href="/menu/food/<%=fd.id%>">
+                                    <h1><%= fd.title %></h1>
+                                </a>
+                                <p><%= fd.desc %></p>
+                            </div>
+                            <div class="price-menu">
+                                <h2>Rp <%= fd.price %></h2>
+                            </div>
+                        </div>
+                    </div>
+                <% }) %>
+                <!-- <div class="menu">
+                    <div class="img-container">
+                        <img src="/imgs/jakub-kapusnak-4f4YZfDMLeU-unsplash.jpg" alt="">
+                    </div>
+                    <div class="menu-info">
+                        <div class="title-menu">
+                            <h1>Omelet Sapi</h1>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, id!</p>
+                        </div>
+                        <div class="price-menu">
+                            <h2>Rp 15.000</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu"></div>
+                <div class="menu"></div>
+                <div class="menu"></div>
+                <div class="menu"></div> -->
+            </div>
+          </div>
+      </main>
+
+      <div class="bars-menu">
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="gallery">Gallery</a>
+            </li>
+            <li class="active">
+                <a href="menu">Menu</a>
+            </li>
+            <li>
+                <a href="about">About</a>
+            </li>
+            <li>
+                <button>Contact Us</button>
+            </li>
+        </ul>
+      </div>
+
+      <%- include('./partials/footer') -%>
+
+      <script src="/scripts/nav.js"></script>
+      <script src="/scripts/menu.js"></script>
+</body>
+</html>

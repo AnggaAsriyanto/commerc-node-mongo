@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@200;400;700&display=swap');
+
+:root {
+    --f1-family: 'Playfair Display', serif;
+    --f2-family: 'Poppins', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body {
+    font-family: var(--f2-family);
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+main .page {
+    width: 100%;
+    height: 100%;
+    margin: 5% 0 0;
+}
+
+.page .img-container {
+    position: relative;
+    width: 75vw;
+    height: 85vh;
+    top: 50%;
+    left: 50%;
+    background-image: url('https://images.unsplash.com/photo-1619536095378-c96a5639ccc5?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+}
+
+.page .img-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 1000;
+}
+
+.page .img-f1 {
+    width: 100%;
+    height: 100%;
+}
+
+.page .text {
+    position: absolute;
+    top: 30%;
+    left: 6%;
+    font-family: var(--f1-family);
+    font-size: 2.5rem;
+    color: #f8debb;
+}
+
+.page .text h1 {
+    width: 2rem;
+    line-height: 5rem;
+}
+
+.page .text span {
+    margin-left: 3rem;
+    white-space: nowrap;
+}
+
+.page .desc {
+    position: absolute;
+    width: 25%;
+    font-family: var(--f2-family);
+    font-size: 0.80rem;
+    right: 5%;
+    line-height: 1.1rem;
+    color: rgb(122, 120, 120);
+
+}
+
+.ps {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+}
+
+.ps div {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ps .ps-text {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   color: #000;
+   width: 80%;
+   text-align: left;
+}
+
+.ps .ps-text h1 {
+    font-size: 3.5rem;
+}
+
+.ps .ps-text p {
+    color: rgb(167, 166, 166);
+    font-size: 0.85rem;
+    line-height: 1.4rem;
+}
+
+.ps .ps-text a {
+    text-decoration: none;
+    margin: 0.8rem 0;
+    font-size: 0.75rem;
+    width: 35%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: orange;
+    border-radius: 15px;
+    color: rgb(255, 255, 255);
+}
+
+.ps .ps-img {
+    width: 60%;
+    height: 85%;
+    max-height: 800px;
+    border-radius: 5px;
+    overflow: hidden;
+    margin: auto 0;
+}
+
+.ps img {
+    width: 100%;
+    height: 100%;
+}
+
+
+@media(max-width: 565px) {
+    main .page {
+        height: max-content;
+        margin: 5% 0;
+    }
+
+    main .page:nth-of-type(1) {
+        height: 100%;
+    }
+
+    .page .img-container {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .page:nth-of-type(even) .ps {
+        flex-direction: column-reverse;
+    }
+
+    .page .text {
+        font-size: 1.5rem;
+        top: 35%;
+    }
+
+    .page .desc {
+        right: auto;
+        left: 8%;
+        top: 55%;
+        color: #fff;
+        width: 50%;
+    }
+
+    .page .text h1 {
+        width: 1rem;
+        line-height: 2.7rem;
+    }
+
+    .ps div {
+        margin: 0.5rem 0;
+    }
+
+    .ps .ps-text, .ps .ps-img {
+        width: 100%;
+        padding: 0 2rem;
+    }
+
+    .ps .ps-text h1 {
+        font-size: 2rem;
+    }
+
+    .ps .ps-text p {
+        font-size: 0.8rem;
+    }
+
+    .ps .ps-text a {
+        font-size: 0.75rem;
+        width: 40%;
+    }
+}
+
